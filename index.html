@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>datag's page</title>
+  <title>datag's portfolio</title>
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/149835?s=64&v=4" type="image/png">
+  <link rel="canonical" href="https://datag.is-a.dev/">
   <style>
     body {
       background-color: black;
@@ -12,6 +14,20 @@
       text-align: center;
       margin: 0;
       padding: 2rem;
+    }
+    h1 {
+      margin-bottom: 1rem;
+    }
+    p.intro {
+      background-color: #1a1a1a;
+      color: #f0f0f0;
+      padding: 1rem;
+      border-radius: 10px;
+      max-width: 700px;
+      margin: 0 auto 2rem auto;
+      line-height: 1.6;
+      font-size: 1.1rem;
+      font-family: Georgia, "Times New Roman", serif;
     }
     img {
       border-radius: 50%;
@@ -32,21 +48,66 @@
     a:hover {
       text-decoration: underline;
     }
+    .contact {
+      margin: 2rem 0;
+    }
+    .oss-box {
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 12px;
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      text-align: left;
+    }
+    .oss-box h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .oss-box ul {
+      text-align: center;
+      padding-left: 1.2rem;
+    }
+    .oss-box li {
+      margin: 0.5rem 0;
+    }
   </style>
 </head>
 <body>
-  <h1>datag's page</h1>
-  <img src="https://avatars.githubusercontent.com/u/149835?s=400&v=4" alt="datag's avatar" width="400" height="400">
+  <h1>datag's portfolio</h1>
+  <p class="intro">
+    Greetings! I'm Dominik, a software developer.  
+    Work-related, I’m mainly a web developer with a focus on backend/PHP.  
+    Privately, my interests aren’t tied to one language or tech stack — I enjoy working with C/C++, Rust, Java, PHP, JavaScript, depending on what’s fun and gets the job done.
+  </p>
+  <img src="https://avatars.githubusercontent.com/u/149835?s=300&v=4" alt="datag's avatar" width="300" height="300">
+  
   <ul>
     <li><a href="https://github.com/datag">My GitHub Profile</a></li>
-    <li>Open Source Software
-      <ul>
-        <li><a href="https://datag.github.io/retro-writer/#play-gist:5661703f56040e691ea4274f455413c5">RetroWriter</a></li>
-        <li><a href="https://datag.github.io/tilewordquiz/">TileWordQuiz</a></li>
-        <li><a href="https://datag.github.io/turtle-graphics/">Turtle Graphics</a></li>
-      </ul>
-    </li>
+    <li><a href="https://github.com/podarcis">Work-related GitHub (podarcis)</a></li>
   </ul>
+
+  <div class="contact">
+    <a href="mailto:dominik.geyer@gmail.com">Contact me via Email</a>
+  </div>
+
+  <div class="oss-box">
+    <h2>Some of my tinkering projects (Open Source)</h2>
+    <ul>
+      <li>
+        <a href="https://datag.github.io/retro-writer/#play-gist:5661703f56040e691ea4274f455413c5">RetroWriter</a>
+        [<a href="https://github.com/datag/retro-writer">GitHub Repo</a>]
+      </li>
+      <li>
+        <a href="https://datag.github.io/tilewordquiz/">TileWordQuiz</a>
+        [<a href="https://github.com/datag/tilewordquiz">GitHub Repo</a>]
+      </li>
+      <li>
+        <a href="https://datag.github.io/turtle-graphics/">Turtle Graphics</a>
+        [<a href="https://github.com/datag/turtle-graphics">GitHub Repo</a>]
+      </li>
+    </ul>
+  </div>
 </body>
 </html>
 
