@@ -1,117 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-neutral-950">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>datag's portfolio</title>
   <link rel="icon" href="https://avatars.githubusercontent.com/u/149835?s=64&v=4" type="image/png">
   <link rel="canonical" href="https://datag.is-a.dev/">
-  <style>
-    body {
-      background-color: black;
-      color: white;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      margin: 0;
-      padding: 2rem;
-    }
-    h1 {
-      margin-bottom: 1rem;
-    }
-    p.intro {
-      background-color: #1a1a1a;
-      color: #f0f0f0;
-      padding: 1rem;
-      border-radius: 10px;
-      max-width: 700px;
-      margin: 0 auto 2rem auto;
-      line-height: 1.6;
-      font-size: 1.1rem;
-      font-family: Georgia, "Times New Roman", serif;
-    }
-    img {
-      border-radius: 50%;
-      margin: 1.5rem 0;
-    }
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-    li {
-      margin-top: 1rem;
-    }
-    a {
-      color: #4da6ff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    a.highlight {
-      color: white;
-    }
-    .contact {
-      margin: 2rem 0;
-    }
-    .oss-box {
-      background-color: #1a1a1a;
-      border: 1px solid #333;
-      border-radius: 12px;
-      max-width: 700px;
-      margin: 2rem auto;
-      padding: 1.5rem;
-      text-align: left;
-    }
-    .oss-box h2 {
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-    .oss-box ul {
-      text-align: center;
-      padding-left: 1.2rem;
-    }
-    .oss-box li {
-      margin: 0.5rem 0;
-    }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <h1>datag's portfolio</h1>
-  <p class="intro">
-    Greetings! I'm Dominik, a software developer.  
-    Work-related, I’m mainly a web developer with a focus on backend/PHP.  
-    Privately, my interests aren’t tied to one language or tech stack — I enjoy working with C/C++, Rust, Java, PHP, JavaScript, depending on what’s fun and gets the job done.
-  </p>
-  <img src="https://avatars.githubusercontent.com/u/149835?s=300&v=4" alt="datag's avatar" width="300" height="300">
-  
-  <ul>
-    <li><a href="https://github.com/datag">My GitHub Profile</a></li>
-    <li><a href="https://github.com/podarcis">Work-related GitHub (podarcis)</a></li>
-    <li><a href="https://datag.github.io/kbase" class="highlight">My personal knowledge base (kbase)</a></li>
-  </ul>
+<body class="bg-neutral-950 text-neutral-100 min-h-screen py-12 px-4">
 
-  <div class="contact">
-    <a href="mailto:dominik.geyer@gmail.com">Contact me via Email</a>
+  <!-- Reusable SVG icons via <defs> / <use> -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+    <defs>
+      <!-- GitHub mark -->
+      <symbol id="icon-github" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+      </symbol>
+      <!-- Book open (Heroicons outline) -->
+      <symbol id="icon-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+      </symbol>
+      <!-- Envelope (Heroicons outline) -->
+      <symbol id="icon-envelope" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <div class="max-w-2xl mx-auto space-y-10">
+
+    <!-- Hero -->
+    <header class="flex flex-col items-center gap-5 text-center">
+      <img
+        src="https://avatars.githubusercontent.com/u/149835?s=300&v=4"
+        alt="datag's avatar"
+        width="96" height="96"
+        class="rounded-full ring-2 ring-neutral-700"
+      >
+      <div>
+        <h1 class="text-3xl font-bold tracking-tight text-neutral-100">datag's portfolio</h1>
+        <p class="mt-1 text-sm text-neutral-500">Dominik Geyer · Software Developer</p>
+      </div>
+      <p class="text-neutral-300 leading-relaxed text-base bg-neutral-900 border border-neutral-800 rounded-xl px-5 py-4 text-left">
+        Greetings! I'm Dominik, a software developer based in Bavaria, Germany.
+        Work-related, I'm mainly a web developer with a focus on backend/PHP.
+        Privately, my interests aren't tied to one language or tech stack — I enjoy working with C/C++, Rust, Java, PHP, JavaScript, and exploring AI topics, depending on what's fun and gets the job done.
+      </p>
+    </header>
+
+    <!-- Links -->
+    <section>
+      <h2 class="text-xs font-semibold uppercase tracking-widest text-neutral-500 mb-3">Links</h2>
+      <ul class="space-y-3">
+        <li>
+          <a href="https://github.com/datag" class="flex items-center gap-3 bg-neutral-900 border border-neutral-800 hover:border-neutral-600 rounded-lg px-4 py-3 text-sky-400 hover:text-sky-300 transition-colors font-medium">
+            <svg class="w-5 h-5 shrink-0" aria-hidden="true"><use href="#icon-github"/></svg>
+            <span class="flex-1">My GitHub Profile</span>
+            <span class="text-neutral-600 text-sm">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/podarcis" class="flex items-center gap-3 bg-neutral-900 border border-neutral-800 hover:border-neutral-600 rounded-lg px-4 py-3 text-sky-400 hover:text-sky-300 transition-colors font-medium">
+            <svg class="w-5 h-5 shrink-0" aria-hidden="true"><use href="#icon-github"/></svg>
+            <span class="flex-1">Work-related GitHub (podarcis)</span>
+            <span class="text-neutral-600 text-sm">→</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://datag.github.io/kbase" class="flex items-center gap-3 bg-neutral-900 border border-neutral-800 hover:border-neutral-600 rounded-lg px-4 py-3 text-neutral-100 hover:text-white transition-colors font-medium">
+            <svg class="w-5 h-5 shrink-0" aria-hidden="true"><use href="#icon-book"/></svg>
+            <span class="flex-1">My personal knowledge base (kbase)</span>
+            <span class="text-neutral-600 text-sm">→</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- OSS Projects -->
+    <section>
+      <h2 class="text-xs font-semibold uppercase tracking-widest text-neutral-500 mb-3">Open Source Tinkering</h2>
+      <ul class="space-y-3">
+
+        <!-- OSS PROJECTS — add new <li> entries here -->
+
+        <li class="relative bg-neutral-900 border border-neutral-800 rounded-lg px-4 py-3 flex items-center justify-between gap-4">
+          <div class="min-w-0">
+            <a href="https://datag.github.io/retro-writer/#play-gist:5661703f56040e691ea4274f455413c5" class="font-medium text-sky-400 hover:text-sky-300 transition-colors">RetroWriter</a>
+            <p class="text-xs text-neutral-500 mt-0.5">Demo writer inspired by the '80s "lettermaker" programs</p>
+          </div>
+          <a href="https://github.com/datag/retro-writer" class="text-neutral-600 hover:text-neutral-300 transition-colors shrink-0" aria-label="RetroWriter on GitHub">
+            <svg class="w-4 h-4" aria-hidden="true"><use href="#icon-github"/></svg>
+          </a>
+        </li>
+
+        <li class="relative bg-neutral-900 border border-neutral-800 rounded-lg px-4 py-3 flex items-center justify-between gap-4">
+          <div class="min-w-0">
+            <a href="https://datag.github.io/tilewordquiz/" class="font-medium text-sky-400 hover:text-sky-300 transition-colors">TileWordQuiz</a>
+            <p class="text-xs text-neutral-500 mt-0.5">Tile word quiz game for kids (based on Tauri)</p>
+          </div>
+          <a href="https://github.com/datag/tilewordquiz" class="text-neutral-600 hover:text-neutral-300 transition-colors shrink-0" aria-label="TileWordQuiz on GitHub">
+            <svg class="w-4 h-4" aria-hidden="true"><use href="#icon-github"/></svg>
+          </a>
+        </li>
+
+        <li class="relative bg-neutral-900 border border-neutral-800 rounded-lg px-4 py-3 flex items-center justify-between gap-4">
+          <div class="min-w-0">
+            <a href="https://datag.github.io/turtle-graphics/" class="font-medium text-sky-400 hover:text-sky-300 transition-colors">Turtle Graphics</a>
+            <p class="text-xs text-neutral-500 mt-0.5">Simple turtle graphics demo</p>
+          </div>
+          <a href="https://github.com/datag/turtle-graphics" class="text-neutral-600 hover:text-neutral-300 transition-colors shrink-0" aria-label="Turtle Graphics on GitHub">
+            <svg class="w-4 h-4" aria-hidden="true"><use href="#icon-github"/></svg>
+          </a>
+        </li>
+
+        <li class="relative bg-neutral-900 border border-neutral-800 rounded-lg px-4 py-3 flex items-center justify-between gap-4">
+          <div class="min-w-0">
+            <span class="font-medium text-neutral-100">rust-6502-emu</span>
+            <p class="text-xs text-neutral-500 mt-0.5">A simple 6502 emulator written in Rust</p>
+          </div>
+          <a href="https://github.com/datag/rust-6502-emu" class="text-neutral-600 hover:text-neutral-300 transition-colors shrink-0" aria-label="rust-6502-emu on GitHub">
+            <svg class="w-4 h-4" aria-hidden="true"><use href="#icon-github"/></svg>
+          </a>
+        </li>
+
+        <li class="relative bg-neutral-900 border border-neutral-800 rounded-lg px-4 py-3 flex items-center justify-between gap-4">
+          <div class="min-w-0">
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="font-medium text-neutral-100">HoldingNuts</span>
+              <span class="text-xs bg-amber-900/60 text-amber-400 border border-amber-700/50 rounded px-1.5 py-0.5 leading-none">discontinued</span>
+            </div>
+            <p class="text-xs text-neutral-500 mt-0.5">An open source multi-platform poker client and server</p>
+          </div>
+          <a href="https://github.com/holdingnuts/holdingnuts" class="text-neutral-600 hover:text-neutral-300 transition-colors shrink-0" aria-label="HoldingNuts on GitHub">
+            <svg class="w-4 h-4" aria-hidden="true"><use href="#icon-github"/></svg>
+          </a>
+        </li>
+
+        <li class="relative bg-neutral-900 border border-neutral-800 rounded-lg px-4 py-3 flex items-center justify-between gap-4">
+          <div class="min-w-0">
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="font-medium text-neutral-100">jTimeSched</span>
+              <span class="text-xs bg-amber-900/60 text-amber-400 border border-amber-700/50 rounded px-1.5 py-0.5 leading-none">discontinued</span>
+            </div>
+            <p class="text-xs text-neutral-500 mt-0.5">A simple and lightweight time tracking tool</p>
+          </div>
+          <a href="https://github.com/datag/jtimesched" class="text-neutral-600 hover:text-neutral-300 transition-colors shrink-0" aria-label="jTimeSched on GitHub">
+            <svg class="w-4 h-4" aria-hidden="true"><use href="#icon-github"/></svg>
+          </a>
+        </li>
+
+        <!-- END OSS PROJECTS -->
+
+      </ul>
+    </section>
+
+    <!-- Contact / Footer -->
+    <footer class="border-t border-neutral-800 pt-6 text-center">
+      <a href="mailto:dominik.geyer@gmail.com" class="inline-flex items-center gap-2 text-sky-400 hover:text-sky-300 transition-colors font-medium">
+        <svg class="w-4 h-4 shrink-0" aria-hidden="true"><use href="#icon-envelope"/></svg>
+        dominik.geyer@gmail.com
+      </a>
+    </footer>
+
   </div>
 
-  <div class="oss-box">
-    <h2>Some of my tinkering projects (Open Source)</h2>
-    <ul>
-      <li>
-        <a href="https://datag.github.io/retro-writer/#play-gist:5661703f56040e691ea4274f455413c5">RetroWriter</a>
-        [<a href="https://github.com/datag/retro-writer">GitHub Repo</a>]
-      </li>
-      <li>
-        <a href="https://datag.github.io/tilewordquiz/">TileWordQuiz</a>
-        [<a href="https://github.com/datag/tilewordquiz">GitHub Repo</a>]
-      </li>
-      <li>
-        <a href="https://datag.github.io/turtle-graphics/">Turtle Graphics</a>
-        [<a href="https://github.com/datag/turtle-graphics">GitHub Repo</a>]
-      </li>
-    </ul>
-  </div>
 </body>
 </html>
-
