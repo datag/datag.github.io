@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>datag's personal projects</title>
-  <link rel="icon" href="https://avatars.githubusercontent.com/u/149835?s=64&v=4" type="image/png">
+<title>datag's personal projects</title>
+  <link rel="icon" href="/favicon.jpg" type="image/jpeg">
   <link rel="canonical" href="https://datag.is-a.dev/">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/src/style.css">
+  <script type="module" src="/src/main.ts"></script>
 </head>
 <body class="bg-neutral-950 text-neutral-100 min-h-screen py-12 px-4">
 
@@ -37,7 +38,7 @@
     <!-- Hero -->
     <header class="flex flex-col items-center gap-5 text-center">
       <img
-        src="https://avatars.githubusercontent.com/u/149835?s=300&v=4"
+        src="/avatar.jpg"
         alt="datag's avatar"
         width="96" height="96"
         class="rounded-full ring-2 ring-neutral-700"
@@ -57,124 +58,19 @@
     <!-- Links -->
     <section>
       <h2 class="text-xs font-semibold uppercase tracking-widest text-neutral-500 mb-3">Links</h2>
-      <ul class="space-y-3">
-        <li>
-          <a href="https://github.com/datag" class="flex items-center gap-3 bg-neutral-900 border border-neutral-800 hover:border-neutral-600 rounded-lg px-4 py-3 text-sky-400 hover:text-sky-300 transition-colors font-medium">
-            <svg class="w-5 h-5 shrink-0" aria-hidden="true"><use href="#icon-github"/></svg>
-            <span class="flex-1">My GitHub Profile</span>
-            <span class="text-neutral-600 text-sm">→</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/podarcis" class="flex items-center gap-3 bg-neutral-900 border border-neutral-800 hover:border-neutral-600 rounded-lg px-4 py-3 text-sky-400 hover:text-sky-300 transition-colors font-medium">
-            <svg class="w-5 h-5 shrink-0" aria-hidden="true"><use href="#icon-github"/></svg>
-            <span class="flex-1">Work-related GitHub (podarcis)</span>
-            <span class="text-neutral-600 text-sm">→</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/dominik-geyer-852802377/" class="flex items-center gap-3 bg-neutral-900 border border-neutral-800 hover:border-neutral-600 rounded-lg px-4 py-3 text-sky-400 hover:text-sky-300 transition-colors font-medium">
-            <svg class="w-5 h-5 shrink-0" aria-hidden="true"><use href="#icon-linkedin"/></svg>
-            <span class="flex-1">LinkedIn</span>
-            <span class="text-neutral-600 text-sm">→</span>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.xing.com/profile/Dominik_Geyer4" class="flex items-center gap-3 bg-neutral-900 border border-neutral-800 hover:border-neutral-600 rounded-lg px-4 py-3 text-sky-400 hover:text-sky-300 transition-colors font-medium">
-            <svg class="w-5 h-5 shrink-0" aria-hidden="true"><use href="#icon-xing"/></svg>
-            <span class="flex-1">XING</span>
-            <span class="text-neutral-600 text-sm">→</span>
-          </a>
-        </li>
-      </ul>
+      <noscript>
+        <p class="text-sm text-neutral-500">Please enable JavaScript to view the links.</p>
+      </noscript>
+      <ul class="space-y-3" data-links></ul>
     </section>
 
     <!-- OSS Projects -->
     <section>
       <h2 class="text-xs font-semibold uppercase tracking-widest text-neutral-500 mb-3">Open Source Tinkering</h2>
-      <ul class="space-y-3">
-
-        <!-- OSS PROJECTS — add new <li> entries here -->
-
-        <li class="relative bg-neutral-900 border border-neutral-800 rounded-lg px-4 py-3 flex items-center justify-between gap-4">
-          <div class="min-w-0">
-            <span class="font-medium text-neutral-100">Wizzy Weasel</span>
-            <p class="text-xs text-neutral-500 mt-0.5">Educational mini-game collection for kids (Vue 3)</p>
-          </div>
-          <a href="https://github.com/datag/wizzy-weasel" class="text-neutral-600 hover:text-neutral-300 transition-colors shrink-0" aria-label="Wizzy Weasel on GitHub">
-            <svg class="w-4 h-4" aria-hidden="true"><use href="#icon-github"/></svg>
-          </a>
-        </li>
-
-        <li class="relative bg-neutral-900 border border-neutral-800 rounded-lg px-4 py-3 flex items-center justify-between gap-4">
-          <div class="min-w-0">
-            <span class="font-medium text-neutral-100">RetroWriter</span>
-            <p class="text-xs text-neutral-500 mt-0.5">Demo writer inspired by the '80s "lettermaker" programs</p>
-          </div>
-          <a href="https://github.com/datag/retro-writer" class="text-neutral-600 hover:text-neutral-300 transition-colors shrink-0" aria-label="RetroWriter on GitHub">
-            <svg class="w-4 h-4" aria-hidden="true"><use href="#icon-github"/></svg>
-          </a>
-        </li>
-
-        <li class="relative bg-neutral-900 border border-neutral-800 rounded-lg px-4 py-3 flex items-center justify-between gap-4">
-          <div class="min-w-0">
-            <span class="font-medium text-neutral-100">TileWordQuiz</span>
-            <p class="text-xs text-neutral-500 mt-0.5">Tile word quiz game for kids (based on Tauri)</p>
-          </div>
-          <a href="https://github.com/datag/tilewordquiz" class="text-neutral-600 hover:text-neutral-300 transition-colors shrink-0" aria-label="TileWordQuiz on GitHub">
-            <svg class="w-4 h-4" aria-hidden="true"><use href="#icon-github"/></svg>
-          </a>
-        </li>
-
-        <li class="relative bg-neutral-900 border border-neutral-800 rounded-lg px-4 py-3 flex items-center justify-between gap-4">
-          <div class="min-w-0">
-            <span class="font-medium text-neutral-100">Turtle Graphics</span>
-            <p class="text-xs text-neutral-500 mt-0.5">Simple turtle graphics demo</p>
-          </div>
-          <a href="https://github.com/datag/turtle-graphics" class="text-neutral-600 hover:text-neutral-300 transition-colors shrink-0" aria-label="Turtle Graphics on GitHub">
-            <svg class="w-4 h-4" aria-hidden="true"><use href="#icon-github"/></svg>
-          </a>
-        </li>
-
-        <li class="relative bg-neutral-900 border border-neutral-800 rounded-lg px-4 py-3 flex items-center justify-between gap-4">
-          <div class="min-w-0">
-            <span class="font-medium text-neutral-100">rust-6502-emu</span>
-            <p class="text-xs text-neutral-500 mt-0.5">A simple 6502 emulator written in Rust</p>
-          </div>
-          <a href="https://github.com/datag/rust-6502-emu" class="text-neutral-600 hover:text-neutral-300 transition-colors shrink-0" aria-label="rust-6502-emu on GitHub">
-            <svg class="w-4 h-4" aria-hidden="true"><use href="#icon-github"/></svg>
-          </a>
-        </li>
-
-        <li class="relative bg-neutral-900 border border-neutral-800 rounded-lg px-4 py-3 flex items-center justify-between gap-4">
-          <div class="min-w-0">
-            <div class="flex items-center gap-2 flex-wrap">
-              <span class="font-medium text-neutral-100">HoldingNuts</span>
-              <span class="text-xs bg-amber-900/60 text-amber-400 border border-amber-700/50 rounded px-1.5 py-0.5 leading-none">discontinued</span>
-            </div>
-            <p class="text-xs text-neutral-500 mt-0.5">An open source multi-platform poker client and server</p>
-          </div>
-          <a href="https://github.com/holdingnuts/holdingnuts" class="text-neutral-600 hover:text-neutral-300 transition-colors shrink-0" aria-label="HoldingNuts on GitHub">
-            <svg class="w-4 h-4" aria-hidden="true"><use href="#icon-github"/></svg>
-          </a>
-        </li>
-
-        <li class="relative bg-neutral-900 border border-neutral-800 rounded-lg px-4 py-3 flex items-center justify-between gap-4">
-          <div class="min-w-0">
-            <div class="flex items-center gap-2 flex-wrap">
-              <span class="font-medium text-neutral-100">jTimeSched</span>
-              <span class="text-xs bg-amber-900/60 text-amber-400 border border-amber-700/50 rounded px-1.5 py-0.5 leading-none">discontinued</span>
-            </div>
-            <p class="text-xs text-neutral-500 mt-0.5">A simple and lightweight time tracking tool</p>
-          </div>
-          <a href="https://github.com/datag/jtimesched" class="text-neutral-600 hover:text-neutral-300 transition-colors shrink-0" aria-label="jTimeSched on GitHub">
-            <svg class="w-4 h-4" aria-hidden="true"><use href="#icon-github"/></svg>
-          </a>
-        </li>
-
-        <!-- END OSS PROJECTS -->
-
-      </ul>
+      <noscript>
+        <p class="text-sm text-neutral-500">Please enable JavaScript to view the projects.</p>
+      </noscript>
+      <ul class="space-y-3" data-projects></ul>
     </section>
 
     <!-- Contact / Footer -->

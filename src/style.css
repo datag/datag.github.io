@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+/* Explicit sources so utility classes are always generated, regardless of
+   Tailwind's automatic content detection (HTML pages live next to src/). */
+@source "../index.html";
+@source "../privacy.html";
+@source "./**/*.ts";
