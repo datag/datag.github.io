@@ -40,6 +40,17 @@ public/               static assets copied verbatim (avatar, favicon, CNAME)
 Every HTML file in the repository root is automatically picked up as a build
 entry (see `vite.config.ts`).
 
+## Google Search Console
+
+`public/google<token>.html` is the site-ownership verification file for Google
+Search Console (HTML file upload method). It is copied to the site root as
+`/google<token>.html` and **must stay there** – Search Console periodically
+re-checks the token and drops the property if the file is missing.
+
+It exists because the DNS TXT record variant requires the `is-a.dev` domain to
+be Cloudflare-proxied, and only a proxied domain may combine a `CNAME` with a
+`TXT` record.
+
 ## Deployment
 
 `.github/workflows/gh-pages.yml` builds the project and publishes `dist/` to
