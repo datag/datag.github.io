@@ -33,6 +33,12 @@ export const projects: Project[] = [
     demoUrl: 'https://datag.is-a.dev/tilewordquiz/',
   },
   {
+    name: 'Turtle Graphics',
+    description: 'Simple turtle graphics demo',
+    url: 'https://github.com/datag/turtle-graphics',
+    demoUrl: 'https://datag.is-a.dev/turtle-graphics/',
+  },
+  {
     name: 'rust-6502-emu',
     description: 'A simple 6502 emulator written in Rust',
     url: 'https://github.com/datag/rust-6502-emu',
