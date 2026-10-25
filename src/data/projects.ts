@@ -5,6 +5,8 @@ export interface Project {
   description: string
   /** URL of the project repository. */
   url: string
+  /** URL of a GH Actions-hosted app demo; renders a "DEMO" badge next to the GitHub icon. */
+  demoUrl?: string
   /** Renders a "discontinued" badge next to the name. */
   discontinued?: boolean
 }
@@ -15,21 +17,20 @@ export const projects: Project[] = [
     name: 'Wizzy Weasel',
     description: 'Educational mini-game collection for kids (Vue 3)',
     url: 'https://github.com/datag/wizzy-weasel',
+    demoUrl: 'https://datag.is-a.dev/wizzy-weasel/',
   },
   {
     name: 'RetroWriter',
     description: 'Demo writer inspired by the \'80s "lettermaker" programs',
     url: 'https://github.com/datag/retro-writer',
+    demoUrl:
+      'https://datag.is-a.dev/retro-writer/#play-gist:5661703f56040e691ea4274f455413c5',
   },
   {
     name: 'TileWordQuiz',
     description: 'Tile word quiz game for kids (based on Tauri)',
     url: 'https://github.com/datag/tilewordquiz',
-  },
-  {
-    name: 'Turtle Graphics',
-    description: 'Simple turtle graphics demo',
-    url: 'https://github.com/datag/turtle-graphics',
+    demoUrl: 'https://datag.is-a.dev/tilewordquiz/',
   },
   {
     name: 'rust-6502-emu',

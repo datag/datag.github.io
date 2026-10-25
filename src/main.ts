@@ -93,14 +93,28 @@ function renderProjects(container: HTMLElement): void {
     description.className = 'text-xs text-neutral-500 mt-0.5'
     description.textContent = project.description
 
+    const actions = document.createElement('div')
+    actions.className = 'flex items-center gap-2 shrink-0'
+
+    if (project.demoUrl !== undefined) {
+      const demo = document.createElement('a')
+      demo.href = project.demoUrl
+      demo.className =
+        'text-xs bg-emerald-900/60 text-emerald-400 border border-emerald-700/50 rounded px-1.5 py-0.5 leading-none hover:bg-emerald-800/60 hover:text-emerald-300 transition-colors'
+      demo.textContent = 'DEMO'
+      demo.setAttribute('aria-label', `${project.name} demo`)
+      actions.append(demo)
+    }
+
     const anchor = document.createElement('a')
     anchor.href = project.url
     anchor.className = 'text-neutral-600 hover:text-neutral-300 transition-colors shrink-0'
     anchor.setAttribute('aria-label', `${project.name} on GitHub`)
     anchor.append(createIcon('github', 'w-4 h-4'))
+    actions.append(anchor)
 
     details.append(description)
-    item.append(details, anchor)
+    item.append(details, actions)
     container.append(item)
   }
 }
