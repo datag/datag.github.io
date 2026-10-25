@@ -26,14 +26,36 @@ function renderLinks(container: HTMLElement): void {
       'flex items-center gap-3 bg-neutral-900 border border-neutral-800 hover:border-neutral-600 rounded-lg px-4 py-3 text-sky-400 hover:text-sky-300 transition-colors font-medium'
 
     const label = document.createElement('span')
-    label.className = 'flex-1'
     label.textContent = link.label
+
+    const labelRow = document.createElement('div')
+    labelRow.className = 'flex items-center gap-2 flex-wrap'
+    labelRow.append(label)
+
+    if (link.handle !== undefined) {
+      const handle = document.createElement('code')
+      handle.className =
+        'font-mono text-xs font-normal bg-neutral-800 text-neutral-300 rounded px-1.5 py-0.5 leading-tight'
+      handle.textContent = link.handle
+      labelRow.append(handle)
+    }
+
+    const details = document.createElement('div')
+    details.className = 'flex-1 min-w-0'
+    details.append(labelRow)
+
+    if (link.note !== undefined) {
+      const note = document.createElement('p')
+      note.className = 'text-xs font-normal text-neutral-500 mt-0.5'
+      note.textContent = link.note
+      details.append(note)
+    }
 
     const arrow = document.createElement('span')
     arrow.className = 'text-neutral-600 text-sm'
     arrow.textContent = '→'
 
-    anchor.append(createIcon(link.icon, 'w-5 h-5 shrink-0'), label, arrow)
+    anchor.append(createIcon(link.icon, 'w-5 h-5 shrink-0'), details, arrow)
     item.append(anchor)
     container.append(item)
   }

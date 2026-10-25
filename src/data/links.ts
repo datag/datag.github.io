@@ -8,6 +8,10 @@ export interface Link {
   href: string
   /** Icon from the sprite, rendered as `#icon-<name>`. */
   icon: IconName
+  /** Optional handle rendered as inline code next to the label. */
+  handle?: string
+  /** Optional muted subtitle rendered below the label. */
+  note?: string
 }
 
 export const links: Link[] = [
@@ -15,11 +19,14 @@ export const links: Link[] = [
     label: 'My GitHub Profile',
     href: 'https://github.com/datag',
     icon: 'github',
+    handle: 'datag',
   },
   {
-    label: 'Work-related GitHub (podarcis)',
+    label: 'Work-related GitHub',
     href: 'https://github.com/podarcis',
     icon: 'github',
+    handle: 'podarcis',
+    note: 'Unrelated to my personal projects',
   },
   {
     label: 'LinkedIn',
